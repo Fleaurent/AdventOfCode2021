@@ -5,7 +5,7 @@ My Advent of Code 2021 Python 3.10.0 Solutions
 | Day | Part 1 | Part 2 |
 |-----|--------|--------|
 | 1   |   *    |   *    |
-| 2   |        |        |
+| 2   |   *    |   *    |
 | 3   |        |        |
 | 4   |        |        |
 | 5   |        |        |
