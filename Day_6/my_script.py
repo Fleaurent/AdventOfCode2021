@@ -5,7 +5,7 @@ INPUT_FILE         = PROJECT_DIR / "Day_6" / "input.txt"
 EXAMPLE_INPUT_FILE = PROJECT_DIR / "Day_6" / "example_input.txt"
 
 
-def get_input(filepath: Path) -> list[list[tuple]]:
+def get_input(filepath: Path) -> list[int]:
     numbers = []
 
     with open(filepath, "r") as f:
