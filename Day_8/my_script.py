@@ -66,7 +66,7 @@ PROJECT_DIR = Path(__file__).resolve().parents[1]
 INPUT_FILE         = PROJECT_DIR / "Day_8" / "input.txt"
 EXAMPLE_INPUT_FILE = PROJECT_DIR / "Day_8" / "example_input.txt"
 
-def get_input(filepath: Path) -> tuple[list[int], list[int]]:
+def get_input(filepath: Path) -> tuple[list[list[str]], list[list[str]]]:
     # Each entry consists of ten unique signal patterns, a | delimiter, and finally the four digit output value
     signals = []
     digits = []
@@ -80,7 +80,7 @@ def get_input(filepath: Path) -> tuple[list[int], list[int]]:
     return signals, digits
 
 
-def part_1(digits: list[int]) -> int:
+def part_1(digits: list[list[str]]) -> int:
     # how many times do digits 1, 4, 7, or 8 appear
     n_digits = 0
 
@@ -102,7 +102,8 @@ def part_1(digits: list[int]) -> int:
 
     return n_digits
 
-def parse_numbers(numbers: list[str]) -> list[int]:
+
+def parse_numbers(numbers: list[str]) -> list[set[str]]:
     segment_dict = {'a': [], 'b': [], 'c': [], 'd': [], 'e': [], 'f': [], 'g': []}
     parsed_numbers = [0 for i in range(10)]
 
@@ -161,7 +162,7 @@ def parse_numbers(numbers: list[str]) -> list[int]:
     return parsed_numbers
 
 
-def part_2(signals: list[int], digits: list[int]) -> int:
+def part_2(signals: list[list[str]], digits: list[list[str]]) -> int:
     sum_of_digits = 0
     for i in range(len(signals)):
         # parse 7 Segment order for each signal/digit combo
